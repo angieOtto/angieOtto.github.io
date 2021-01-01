@@ -1,0 +1,225 @@
+@import 'mixins';
+
+$headings : #212121;
+$text : #212121;
+$accent : whitesmoke;
+
+$intro-bg   : #121212;
+$resume-bg  : #f3f3f333;
+$contact-bg : #333333;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+section {
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+h1 {
+    font-size: 7rem;
+    font-family: 'BonvenoCF', sans-serif;
+    padding: 2rem;
+}
+
+p {
+    font-size: 2rem;
+    font-family: 'Montserrat Ace', sans-serif;
+}
+
+li {
+    list-style-type: disc;
+    font-size: 2rem;
+    text-align: start;
+}
+
+hr {
+    padding-bottom: 2rem;
+}
+
+i {
+    font-size: 7rem;
+    padding-bottom: 3rem;
+}
+
+.intro-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: $intro-bg;
+    @include centerV;
+
+    svg {
+        position: relative;
+        top: 0%;
+        left: 3%;
+        transform: translate(0%, 0%);
+        transform: scale(2);
+        transition: all 2s;
+    }
+
+    button {
+
+        position: relative;
+        top: 75%;
+        opacity: 0;
+        animation: intro-slideIn 2s 3s 1 forwards;
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        @include button;
+
+        &:hover {
+            @include button-hover;
+        }
+    }
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #131313;
+    padding-top: 5rem;
+
+    i {
+        color: $accent;
+    }
+
+    h2 {
+        color: whitesmoke;
+    }
+}
+
+.resume-section {
+    height: 100%;
+    width: 100%;
+    padding: 5rem 5rem;
+    padding-top: 3rem;
+    
+    .resume-statement {
+        background-color: $resume-bg;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        padding: 0rem 5rem;
+    }
+
+}
+
+.skills-section {
+    height: 100%;
+    width: 100%;
+    padding: 0rem 5rem;
+    padding-bottom: 5rem;
+
+    .skills-statement {
+        background-color: $resume-bg;
+        height: 100%;
+        width: 100%;
+        padding: 0rem 5rem;
+    }
+
+    .skills-list-container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.history-section {
+    background-color: $resume-bg;
+    height: 100%;
+    width: 100%;
+    padding: 0rem 5rem;
+    text-align: start;
+    h1 {
+        text-align: center;
+    }
+    
+    .jobs-container {
+        // background-color: aqua;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 5rem;
+
+        h3 {
+            font-style: italic;
+        }
+
+        li {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 720px) {
+
+    .intro-section {
+        display: none;
+    }
+
+    .contact-info {
+        flex-direction: column;
+
+        i {
+            font-size: 3rem;
+            padding: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.75rem;
+    }
+
+    .skills-list-container {
+        flex-direction: column;
+    }
+
+    .jobs-container {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+}
+
+
+@keyframes intro-slideIn {
+    0% {}
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

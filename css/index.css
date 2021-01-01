@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+section {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+h1 {
+  font-size: 7rem;
+  font-family: 'BonvenoCF', sans-serif;
+  padding: 2rem;
+}
+
+p {
+  font-size: 2rem;
+  font-family: 'Montserrat Ace', sans-serif;
+}
+
+li {
+  list-style-type: disc;
+  font-size: 2rem;
+  text-align: start;
+}
+
+hr {
+  padding-bottom: 2rem;
+}
+
+i {
+  font-size: 7rem;
+  padding-bottom: 3rem;
+}
+
+.intro-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #121212;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro-section svg {
+  position: relative;
+  top: 0%;
+  left: 3%;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.intro-section button {
+  position: relative;
+  top: 75%;
+  opacity: 0;
+  -webkit-animation: intro-slideIn 2s 3s 1 forwards;
+          animation: intro-slideIn 2s 3s 1 forwards;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  border: solid 1px #ffffff;
+  background-color: transparent;
+  padding: 2rem 10rem;
+  border-radius: 50px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: #ffffff;
+  font-size: 150%;
+  outline: none;
+}
+
+.intro-section button:hover {
+  background-color: whitesmoke;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: #212121;
+}
+
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #131313;
+  padding-top: 5rem;
+}
+
+.contact-info i {
+  color: whitesmoke;
+}
+
+.contact-info h2 {
+  color: whitesmoke;
+}
+
+.resume-section {
+  height: 100%;
+  width: 100%;
+  padding: 5rem 5rem;
+  padding-top: 3rem;
+}
+
+.resume-section .resume-statement {
+  background-color: #f3f3f333;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0rem 5rem;
+}
+
+.skills-section {
+  height: 100%;
+  width: 100%;
+  padding: 0rem 5rem;
+  padding-bottom: 5rem;
+}
+
+.skills-section .skills-statement {
+  background-color: #f3f3f333;
+  height: 100%;
+  width: 100%;
+  padding: 0rem 5rem;
+}
+
+.skills-section .skills-list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.history-section {
+  background-color: #f3f3f333;
+  height: 100%;
+  width: 100%;
+  padding: 0rem 5rem;
+  text-align: start;
+}
+
+.history-section h1 {
+  text-align: center;
+}
+
+.history-section .jobs-container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 5rem;
+}
+
+.history-section .jobs-container h3 {
+  font-style: italic;
+}
+
+.history-section .jobs-container li {
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 720px) {
+  .intro-section {
+    display: none;
+  }
+  .contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-info i {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .contact-info h2 {
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  p {
+    font-size: 1.75rem;
+  }
+  .skills-list-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .jobs-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  h2 {
+    font-size: 1.9rem;
+  }
+}
+
+@-webkit-keyframes intro-slideIn {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes intro-slideIn {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=index.css.map */

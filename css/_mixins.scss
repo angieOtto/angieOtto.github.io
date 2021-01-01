@@ -1,0 +1,30 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centerV {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button {
+    border: solid 1px #ffffff;
+    background-color: transparent;
+    padding: 2rem 10rem;
+    border-radius: 50px;
+    transition: all 1s;
+    color: #ffffff;
+    font-size: 150%;
+    outline: none;
+}
+
+@mixin button-hover {
+    background-color: whitesmoke;
+    transition: all 1s;
+    color: $text;
+    // font-size: 150%;
+}
